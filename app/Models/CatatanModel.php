@@ -7,6 +7,7 @@ use CodeIgniter\Model;
 class CatatanModel extends Model
 {
     protected $table      = 'catatan';
-    public $primaryKey = 'id';
-    protected $allowedFields = ['judul', 'isi'];
+    protected $primaryKey = 'id';
+    protected $allowedFields = ['judul', 'isi', 'created_at', 'updated_at'];
+	protected $useTimestamps = true;
 }

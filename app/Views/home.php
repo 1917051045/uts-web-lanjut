@@ -25,7 +25,7 @@
 
     <a href="/catatan/tambah">
         <button type="button">
-            Tambah Data
+            Tambah Catatan
         </button>
     </a>
     <br><br>
@@ -34,6 +34,8 @@
             <th>No</th>
             <th>Judul</th>
             <th>Isi</th>
+            <th>Created</th>
+            <th>Updated</th>
             <th>Aksi</th>
         </tr>
         <?php $i = 1; ?>
@@ -42,6 +44,8 @@
                 <td><?php echo $i; $i++; ?></td>
                 <td><?= $c['judul']; ?></td>
                 <td><?= $c['isi']; ?></td>
+                <td><?= $c['created_at']; ?></td>
+                <td><?= $c['updated_at']; ?></td>
                 <td>
                     <a href="/catatan/edit/<?= $c['id']; ?>">
                         <button type="button" class="btn ">

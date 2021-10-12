@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Tambah Data</h1>
+    <h1>Tambah Catatan</h1>
     <table>
         <form action="/catatan/save" method="post">
             <tr>

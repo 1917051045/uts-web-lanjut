@@ -24,7 +24,7 @@ class Catatan extends BaseController
     {
         $this->catatanModel->save([
             'judul' => $this->request->getVar('judul'),
-            'isi' => $this->request->getVar('isi')
+            'isi' => $this->request->getVar('isi'),
         ]);
         return redirect()->to('/');
     }
@@ -43,12 +43,11 @@ class Catatan extends BaseController
 
     public function update($id)
     {
-        $this->catatanModel->delete($id);
-        $this->catatanModel->save([
-            'id' => $this->request->getVar('id'),
+        $data = [
             'judul' => $this->request->getVar('judul'),
-            'isi' => $this->request->getVar('isi')
-        ]);
+            'isi' => $this->request->getVar('isi'),
+        ];
+        $this->catatanModel->update($id, $data);
         return redirect()->to('/');
     }
 }
